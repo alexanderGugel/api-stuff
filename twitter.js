@@ -23,9 +23,9 @@ var twit = new Twit(twitOptions);
 twitter.get('/statuses/:id', function (req, res) {
   twit.get('statuses/show/' + req.params.id, function (error, data, response) {
     if (error) {
-      res.status(error.statusCode).json(error);
+      res.status(error.statusCode).cache(error);
     } else {
-      res.json(data);
+      res.cache(data);
     }
   });
 });
@@ -33,9 +33,9 @@ twitter.get('/statuses/:id', function (req, res) {
 twitter.get('/users/:id', function (req, res) {
   twit.get('users/show/' + req.params.id, function (error, data, response) {
     if (error) {
-      res.status(error.statusCode).json(error);
+      res.status(error.statusCode).cache(error);
     } else {
-      res.json(data);
+      res.cache(data);
     }
   });
 });

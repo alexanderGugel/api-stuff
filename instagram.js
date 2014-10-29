@@ -11,13 +11,13 @@ if (!CLIENT_ID) {
 
 instagram.get('/media/:id', function (req, res) {
   request('https://api.instagram.com/v1/media/' + req.params.id + '?client_id=' + CLIENT_ID, function (error, response, body) {
-    res.json(JSON.parse(body));
+    res.cache(JSON.parse(body));
   });
 });
 
 instagram.get('/users/:id', function (req, res) {
   request('https://api.instagram.com/v1/users/' + req.params.id + '?client_id=' + CLIENT_ID, function (error, response, body) {
-    res.json(JSON.parse(body));
+    res.cache(JSON.parse(body));
   });
 });
 
