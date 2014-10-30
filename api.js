@@ -5,6 +5,12 @@ var api = express.Router();
 
 var expire = process.env.CACHE_EXPIRE || 3600;
 
+api.all('*', function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 api.get('*', function (req, res, next) {
   redis.get(req.url, function (error, cached) {
     if (cached) {
@@ -22,12 +28,6 @@ api.use(function (req, res, next) {
     redis.expire(req.url, expire);
   };
   next()
-});
-
-api.all('*', function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
 });
 
 api.use(require('./vine'));
