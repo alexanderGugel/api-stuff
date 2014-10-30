@@ -10,6 +10,12 @@
     <!--[if gt IE 8]><!-->
       <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/base-min.css&pure/0.5.0/grids-min.css&pure/0.5.0/grids-responsive-min.css">
     <!--<![endif]-->
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <!--<![endif]-->
     <style>
       html {
         box-sizing: border-box;
@@ -103,14 +109,14 @@
   </head>
   <body>
     <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
-    
+
     <h1>
       api-stuff
     </h1>
     <h2>Simple wrapper REST APIs for Twitter, Vine and Instagram</h2>
 
     <section class="pure-g">
-      <div class="pure-u-1-2 right">
+      <div class="pure-u-1-1 pure-u-md-1-2 right">
         <section class="code">
           <a href="http://localhost:3141/api/twitter/statuses/526445679275933696">http://localhost:3141/api/twitter/statuses/526445679275933696</a>
           <br>
@@ -122,7 +128,7 @@
           <small>Retrieves a user profile with the specified id.</small>
         </section>
       </div>
-      <div class="pure-u-1-2 left">
+      <div class="pure-u-1-1 pure-u-md-1-2 left">
         <p>
           In good ol' days when fetching a tweet was as easy as <a href="https://api.twitter.com/1/statuses/user_timeline/$userid.xml?count=1&include_rts=1callback=?">https://api.twitter.com/1/statuses/user_timeline/$userid.xml?count=1&include_rts=1callback=?</a>?
         </p>
@@ -133,7 +139,7 @@
     </section>
 
     <section class="pure-g">
-      <div class="pure-u-1-2 right">
+      <div class="pure-u-1-1 pure-u-md-1-2 right">
         <p>
           You know those cool new companies that don't even have a public API (I'm looking at you, <a href="https://vine.co/">Vine</a>)?
         </p>
@@ -141,7 +147,7 @@
           We've got you back.
         </p>
       </div>
-      <div class="pure-u-1-2 left">
+      <div class="pure-u-1-1 pure-u-md-1-2 left">
         <section class="code">
           <a href="http://localhost:3141/api/vine/posts/1139356907086516224">http://localhost:3141/api/vine/posts/1139356907086516224</a>
           <br>
@@ -156,7 +162,7 @@
     </section>
 
     <section class="pure-g">
-      <div class="pure-u-1-2 right">
+      <div class="pure-u-1-1 pure-u-md-1-2 right">
         <section class="code">
           <a href="http://localhost:3141/api/instagram/media/841539146749773389_1606728">http://localhost:3141/api/instagram/media/841539146749773389_1606728</a>
           <br>
@@ -168,7 +174,7 @@
           <small>Retrieves a user profile with the specified id.</small>
         </section>
       </div>
-      <div class="pure-u-1-2 left">
+      <div class="pure-u-1-1 pure-u-md-1-2 left">
         <p>
           Ahhh.. <a href="http://instagram.com/">Instagram</a>. Even though they probably have the nicest API ever, we made fetching your favorite photo even easier.
         </p>
