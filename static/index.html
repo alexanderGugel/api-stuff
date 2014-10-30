@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>api-stuff</title>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/base-min.css&pure/0.5.0/grids-min.css&pure/0.5.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+      <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/base-min.css&pure/0.5.0/grids-min.css&pure/0.5.0/grids-responsive-min.css">
+    <!--<![endif]-->
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+
+      html {
+        background: #39CB83;
+        color: #DDFAEC;
+        font-weight: 300;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      body {
+        max-width: 900px;
+        margin: auto
+      }
+
+      html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
+        font-family: 'Helvetica Neue', Helvetica, Arial;
+      }
+
+      .right {
+        text-align: right;
+      }
+
+      .left {
+        text-align: left;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 5em;
+        font-family: 'Pacifico', cursive;
+      }
+
+      h2 {
+        font-weight: 300;
+      }
+
+      .depth1 {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      }
+
+      .depth2 {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      }
+
+      .depth3 {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      }
+
+      .depth4 {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      }
+
+      .depth5 {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+      }
+
+      a {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+        color: #DDFAEC;
+        text-decoration: none;
+        word-wrap: break-word;
+      }
+
+      .code {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        margin: 1em;
+        padding: 1em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      section {
+        margin: 1em 0;
+      }
+
+      h4 {
+        margin-bottom: 0.75em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      api-stuff
+    </h1>
+    <h2>Simple REST APIs for Twitter, Vine and Instagram</h2>
+
+    <section class="pure-g">
+      <div class="pure-u-1-2 right">
+        <section class="code">
+          <a href="http://localhost:3141/api/twitter/statuses/526445679275933696">http://localhost:3141/api/twitter/statuses/526445679275933696</a>
+          <br>
+          <small>Retrieves the tweet with the specified id.</small>
+        </section>
+        <section class="code">
+          <a href="http://localhost:3141/api/twitter/users/40297583">http://localhost:3141/api/twitter/users/40297583</a>
+          <br>
+          <small>Retrieves a user profile with the specified id.</small>
+        </section>
+      </div>
+      <div class="pure-u-1-2 left">
+        <p>
+          In good ol' days when fetching a tweet was as easy as <a href="https://api.twitter.com/1/statuses/user_timeline/$userid.xml?count=1&include_rts=1callback=?">https://api.twitter.com/1/statuses/user_timeline/$userid.xml?count=1&include_rts=1callback=?</a>?
+        </p>
+        <p>
+          Those days are back!
+        </p>
+      </div>
+    </section>
+
+    <section class="pure-g">
+      <div class="pure-u-1-2 right">
+        <p>
+          You know those cool new companies that don't even have a public API (I'm looking at you, <a href="https://vine.co/">Vine</a>)?
+        </p>
+        <p>
+          We've got you back.
+        </p>
+      </div>
+      <div class="pure-u-1-2 left">
+        <section class="code">
+          <a href="http://localhost:3141/api/vine/posts/1139356907086516224">http://localhost:3141/api/vine/posts/1139356907086516224</a>
+          <br>
+          <small>Retrieves the vine post with the specified id.</small>
+        </section>
+        <section class="code">
+          <a href="http://localhost:3141/api/vine/users/942331106135519232">http://localhost:3141/api/vine/users/942331106135519232</a>
+          <br>
+          <small>Retrieves a user profile with the specified id.</small>
+        </section>
+      </div>
+    </section>
+
+    <section class="pure-g">
+      <div class="pure-u-1-2 right">
+        <section class="code">
+          <a href="http://localhost:3141/api/instagram/media/841539146749773389_1606728">http://localhost:3141/api/instagram/media/841539146749773389_1606728</a>
+          <br>
+          <small>Retrieves the media (photo or video) with the specified id.</small>
+        </section>
+        <section class="code">
+          <a href="http://localhost:3141/api/vine/users/942331106135519232">http://localhost:3141/api/vine/users/942331106135519232</a>
+          <br>
+          <small>Retrieves a user profile with the specified id.</small>
+        </section>
+      </div>
+      <div class="pure-u-1-2 left">
+        <p>
+          Ahhh.. <a href="http://instagram.com/">Instagram</a>. Even though they probably have the nicest API ever, we made fetching your favorite photo even easier.
+        </p>
+      </div>
+    </section>
+
+    <h4>Stay tuned. More coming soon.</h4>
+    <a href="https://twitter.com/alexanderGugel" class="twitter-follow-button" data-show-count="false">Follow @alexanderGugel</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
+</html>

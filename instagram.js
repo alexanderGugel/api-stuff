@@ -9,6 +9,7 @@ if (!CLIENT_ID) {
   throw new Error('Missing INSTAGRAM_CLIENT_ID env var');
 }
 
+// http://localhost:3141/api/instagram/media/841539146749773389_1606728
 instagram.get('/media/:id', function (req, res) {
   request('https://api.instagram.com/v1/media/' + req.params.id + '?client_id=' + CLIENT_ID, function (error, response, body) {
     res.cache(JSON.parse(body));
