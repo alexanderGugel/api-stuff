@@ -2,6 +2,8 @@
 
 Simple wrapper REST APIs for Twitter, Vine and Instagram
 
+**[Demo](http://api-stuff.azurewebsites.net/)**
+
 ## Running locally
 
 ### Environment Variables
