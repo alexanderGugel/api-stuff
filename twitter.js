@@ -20,7 +20,7 @@ for (var twitOptionKey in twitOptions) {
 
 var twit = new Twit(twitOptions);
 
-twitter.get('/statuses/:id', function (req, res) {
+twitter.get('/twitter/statuses/:id', function (req, res) {
   twit.get('statuses/show/' + req.params.id, function (error, data, response) {
     if (error) {
       res.status(error.statusCode).cache(error);
@@ -30,7 +30,7 @@ twitter.get('/statuses/:id', function (req, res) {
   });
 });
 
-twitter.get('/users/:id', function (req, res) {
+twitter.get('/twitter/users/:id', function (req, res) {
   twit.get('users/show/' + req.params.id, function (error, data, response) {
     if (error) {
       res.status(error.statusCode).cache(error);

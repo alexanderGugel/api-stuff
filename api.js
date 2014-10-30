@@ -30,8 +30,8 @@ api.all('*', function (req, res, next) {
   next();
 });
 
-api.use('/vine', require('./vine'));
-api.use('/twitter', require('./twitter'));
-api.use('/instagram', require('./instagram'));
+api.use(require('./vine'));
+api.use(require('./twitter'));
+api.use(require('./instagram'));
 
 module.exports = exports = api;
