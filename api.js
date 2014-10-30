@@ -3,6 +3,8 @@ var redis = require('./redis');
 
 var api = express.Router();
 
+var expire = process.env.CACHE_EXPIRE || 3600;
+
 api.get('*', function (req, res, next) {
   redis.get(req.url, function (error, cached) {
     if (cached) {
@@ -17,7 +19,7 @@ api.use(function (req, res, next) {
   res.cache = function (json) {
     res.json(json);
     redis.set(req.url, JSON.stringify(json));
-    redis.expire(req.url, 3600);
+    redis.expire(req.url, expire);
   };
   next()
 });
